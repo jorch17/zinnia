@@ -1,21 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
-/**
- *
- * @author Jorch17
- */
+//import models.ModelMain;
+import views.ViewMain;
+import controllers.ControllerMain;
+
+import models.ModelCliente;
+import views.ViewCliente;
+import controllers.ControllerCliente;
+
+//import models.ModelProducto;
+//import views.ViewProducto;
+//import controllers.ControllerProducto;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+    public static void main(String[] jla) {
+        
+        ModelCliente model_cliente = new ModelCliente();
+        ViewCliente view_cliente = new ViewCliente();
+        ControllerCliente controller_cliente = new ControllerCliente(model_cliente,view_cliente);
+        
+        /*ModelProducto model_producto = new ModelProducto();
+        ViewProducto view_producto = new ViewProducto();
+        ControllerProducto controller_producto = new Controllerproducto(model_producto,view_producto);
+        */
+
+        //ModelMain model_main = new ModelMain();
+        ViewMain view_main = new ViewMain();
+        Object views[] = new Object[2];
+        
+        views[0]= view_main;
+        views[1]= view_cliente;
+        //views[2]= view_producto;
+        
+        Object controllers[] = new Object[1];
+        controllers[0]= controller_cliente;
+        //controllers[1]= controller_producto;
+        
+        ControllerMain controller_main = new ControllerMain(views,controllers);
     }
     
 }

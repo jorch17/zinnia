@@ -27,18 +27,39 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jmi_cliente = new javax.swing.JMenuItem();
+        jmi_producto = new javax.swing.JMenuItem();
+        jmi_salir = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Zinnia");
+        setPreferredSize(new java.awt.Dimension(940, 555));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/zinnia.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 933, 501));
+
+        jMenu2.setText("File");
+        jMenu2.setBorderPainted(false);
+
+        jmi_cliente.setText("Cliente");
+        jmi_cliente.setBorderPainted(false);
+        jMenu2.add(jmi_cliente);
+
+        jmi_producto.setText("Producto");
+        jmi_producto.setBorderPainted(false);
+        jMenu2.add(jmi_producto);
+
+        jmi_salir.setText("Salir");
+        jmi_salir.setBorderPainted(false);
+        jMenu2.add(jmi_salir);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,5 +101,11 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jmi_cliente;
+    public javax.swing.JMenuItem jmi_producto;
+    public javax.swing.JMenuItem jmi_salir;
     // End of variables declaration//GEN-END:variables
 }
