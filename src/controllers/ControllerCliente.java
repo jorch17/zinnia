@@ -51,6 +51,11 @@ public class ControllerCliente {
         model_cliente.moverPrimero();
         getValores();
     }//boton mover primero
+        
+    public void jbtn_moverUltimo_click(){
+        model_cliente.moverUltimo();
+        getValores();
+    }//boton mover ultimo
     
     public void jbtn_moverAnterior_click(){
         model_cliente.moverAnterior();
@@ -62,11 +67,6 @@ public class ControllerCliente {
         getValores();
     }//boton mover siguiente
     
-    public void jbtn_moverUltimo_click(){
-        model_cliente.moverUltimo();
-        getValores();
-    }//boton mover ultimo
-    
     public void jbtn_insertar_click(){
         setValores();
         model_cliente.insertar(model_cliente.getNombre(),model_cliente.getApellido_pa(),model_cliente.getApellido_ma(),
@@ -77,7 +77,7 @@ public class ControllerCliente {
     
     public void jbtn_eliminar_click(){
         setValores();
-        model_cliente.borrar(model_cliente.getId_cliente());
+        model_cliente.eliminar(model_cliente.getId_cliente());
         getValores();
     }//boton borrar
     

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 
 
 public class ModelCliente {
@@ -119,11 +119,11 @@ public class ModelCliente {
     
     public void Conectar(){ //conectar con la base de datos
         try{
-            conexion=DriverManager.getConnection("jdbc:mysql://localhost/zinnia","root","151617");                     
+            conexion=DriverManager.getConnection("jdbc:mysql://localhost/zinnia","root","1234");                     
             st=conexion.createStatement(); 
             seleccionarTodo();
-            //rs=st.executeQuery("Select * from cliente");
-            
+            rs=st.executeQuery("Select * from cliente");
+            rs.next();   
             System.out.println("Conexion correcta a la BASE DE DATOS ZINNIA");
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error 101 conexion a BD  "+ex.getMessage());
@@ -171,7 +171,7 @@ public class ModelCliente {
     
     public void moverSiguiente(){
         try{
-            if(rs.last() == false){
+            if(rs.isLast() == false){
                 rs.next();
                 llenarValores();
                 System.out.println("boton activado mover siguiente cliente ");
@@ -183,7 +183,7 @@ public class ModelCliente {
     
     public void moverAnterior(){
         try{
-            if(rs.first() == false){
+            if(rs.isFirst() == false){
                 rs.previous();
                 llenarValores();
                 System.out.println("boton activado mover anterior cliente ");
@@ -209,7 +209,8 @@ public class ModelCliente {
     public void insertar(String nombre,String apellido_pa,String apellido_ma,String telefono,String calle,
             String colonia,String numero,String ciudad,String estado,String email){
         try{
-            sql="insert into cliente(nombre,apellido_pa,apellido_ma,telefono,calle,colonia,numero,ciudad,estado,email) values(?,?,?,?,?,?,?,?,?,?);";
+            sql="insert into cliente(nombre,apellido_pa,apellido_ma,telefono,calle,colonia,numero,ciudad,estado,email)"
+               + " values(?,?,?,?,?,?,?,?,?,?);";
             ps=conexion.prepareStatement(sql);
             ps.setString(1,nombre);
             ps.setString(2,apellido_pa);
@@ -230,7 +231,7 @@ public class ModelCliente {
         }
     }// insertando datos
     
-    public void borrar(int id_cliente){
+    public void eliminar(int id_cliente){
         try{
             sql="delete from cliente where id_cliente= ?;";
             ps=conexion.prepareStatement(sql);
