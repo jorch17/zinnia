@@ -27,7 +27,7 @@ public class ViewCliente extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jl_title = new javax.swing.JLabel();
+        jl_clientes = new javax.swing.JLabel();
         jl_nombre = new javax.swing.JLabel();
         jtf_nombre = new javax.swing.JTextField();
         jl_apellido_pa = new javax.swing.JLabel();
@@ -59,7 +59,7 @@ public class ViewCliente extends javax.swing.JPanel {
         jbtn_anterior = new javax.swing.JButton();
         jbtn_siguiente = new javax.swing.JButton();
 
-        jl_title.setText("Clientes");
+        jl_clientes.setText("Clientes");
 
         jl_nombre.setText("Nombre");
 
@@ -181,7 +181,7 @@ public class ViewCliente extends javax.swing.JPanel {
                                     .addComponent(jbtn_eliminar)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(346, 346, 346)
-                        .addComponent(jl_title)
+                        .addComponent(jl_clientes)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -193,7 +193,7 @@ public class ViewCliente extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jl_title)
+                .addComponent(jl_clientes)
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -263,6 +263,7 @@ public class ViewCliente extends javax.swing.JPanel {
     public javax.swing.JLabel jl_apellido_pa;
     public javax.swing.JLabel jl_calle;
     public javax.swing.JLabel jl_ciudad;
+    public javax.swing.JLabel jl_clientes;
     public javax.swing.JLabel jl_colonia;
     public javax.swing.JLabel jl_email;
     public javax.swing.JLabel jl_estado;
@@ -270,7 +271,6 @@ public class ViewCliente extends javax.swing.JPanel {
     public javax.swing.JLabel jl_nombre;
     public javax.swing.JLabel jl_numero;
     public javax.swing.JLabel jl_telefono;
-    public javax.swing.JLabel jl_title;
     public javax.swing.JTable jt_cliente;
     public javax.swing.JTextField jtf_apellido_ma;
     public javax.swing.JTextField jtf_apellido_pa;
